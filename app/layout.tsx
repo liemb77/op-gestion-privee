@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Bodoni_Moda, Jost } from 'next/font/google';
 import './globals.css';
-import { LanguageProvider } from '@/contexts/LanguageContext';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import AppShell from '@/components/AppShell';
 
 const bodoni = Bodoni_Moda({
   variable: '--font-bodoni',
@@ -30,13 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${bodoni.variable} ${jost.variable}`}>
       <body className="flex flex-col min-h-screen bg-[#F9F8F4] text-[#1C1917] antialiased">
-        <LanguageProvider>
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </LanguageProvider>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
