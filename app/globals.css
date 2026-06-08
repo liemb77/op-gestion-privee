@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #162B4A;
+  --dark: #1C1917;
+  --gold: #C4A35A;
+  --gold-light: #D4B87A;
+  --cream: #F9F8F4;
+  --cream-dark: #EDEBE4;
+  --muted: #78716C;
+  --border: #E7E5E0;
+}
+
+@theme inline {
+  --font-serif: var(--font-bodoni);
+  --font-sans: var(--font-jost);
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 3rem; }
+}
+
+.hero-animate {
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.hero-fade {
+  opacity: 0;
+  animation: heroFadeIn 1s ease forwards;
+}
+.delay-200 { animation-delay: 200ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: var(--font-jost), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-bodoni), Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate, .hero-fade {
+    animation: none;
+    opacity: 1;
+  }
+}
