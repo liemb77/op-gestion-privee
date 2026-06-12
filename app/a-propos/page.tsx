@@ -151,20 +151,30 @@ export default function AboutPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-[#1C1917] font-medium leading-tight">Nos horizons</h2>
           </AnimFade>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            <AnimFade delay={0} className="col-span-2 md:col-span-1 row-span-2">
-              <div className="h-full min-h-[320px] overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <AnimFade delay={0} className="col-span-2 md:col-span-2 md:row-span-2">
+              <div className="h-64 md:h-full overflow-hidden">
+                <img src="/gallery/gasp-sunset.jpeg" alt="Coucher de soleil, Gaspésie" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
             </AnimFade>
             <AnimFade delay={80}>
-              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/lac-louise.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div className="h-48 md:h-56 overflow-hidden">
+                <img src="/gallery/lac-louise.jpeg" alt="Lac Louise, Alberta" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
             </AnimFade>
             <AnimFade delay={160}>
-              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div className="h-48 md:h-56 overflow-hidden">
+                <img src="/gallery/mont-blanc.jpg" alt="Mont Blanc, France" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
             </AnimFade>
             <AnimFade delay={240}>
-              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/lac-moraine.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div className="h-48 md:h-56 overflow-hidden">
+                <img src="/gallery/lac-moraine.jpeg" alt="Lac Moraine, Alberta" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
             </AnimFade>
             <AnimFade delay={320}>
-              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/revelstoke.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+              <div className="h-48 md:h-56 overflow-hidden">
+                <img src="/gallery/revelstoke.jpeg" alt="Revelstoke, BC" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
             </AnimFade>
           </div>
         </div>
