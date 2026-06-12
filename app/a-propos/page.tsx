@@ -122,6 +122,52 @@ export default function AboutPage() {
             </AnimFade>
           </div>
         </div>
+
+        {/* Doris */}
+        <div className="border-t border-[#E7E5E0] pt-16 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+            <AnimFade>
+              <div
+                className="aspect-square overflow-hidden bg-[#F9F8F4] flex items-center justify-center"
+                style={{ maxWidth: '260px' }}
+              >
+                <span className="font-serif text-4xl text-[#C4A35A]/40">DL</span>
+              </div>
+            </AnimFade>
+            <AnimFade delay={200} className="md:col-span-2 pt-2">
+              <h3 className="font-serif text-3xl text-[#1C1917] font-medium mb-1">Doris Longpré</h3>
+              <p className="text-[#78716C] text-sm italic font-serif mb-5">Adjointe administrative</p>
+              <div className="w-6 h-[1px] bg-[#C4A35A] mb-5" />
+            </AnimFade>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="bg-[#F9F8F4] py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-8">
+          <AnimFade className="mb-12">
+            <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-4">Galerie</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#1C1917] font-medium leading-tight">Nos horizons</h2>
+          </AnimFade>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <AnimFade delay={0} className="col-span-2 md:col-span-1 row-span-2">
+              <div className="h-full min-h-[320px] overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            </AnimFade>
+            <AnimFade delay={80}>
+              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/lac-louise.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            </AnimFade>
+            <AnimFade delay={160}>
+              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            </AnimFade>
+            <AnimFade delay={240}>
+              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/lac-moraine.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            </AnimFade>
+            <AnimFade delay={320}>
+              <div className="aspect-[4/3] overflow-hidden" style={{ backgroundImage: 'url(/gallery/revelstoke.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            </AnimFade>
+          </div>
+        </div>
       </section>
 
       {/* CTA */}

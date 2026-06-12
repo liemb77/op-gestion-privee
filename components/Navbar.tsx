@@ -6,7 +6,7 @@ import { useScrolled } from '@/hooks/useScrolled';
 import { t } from '@/lib/translations';
 
 export default function Navbar() {
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
   const scrolled = useScrolled(60);
   const T = t[lang].nav;
   const [open, setOpen] = useState(false);
@@ -42,7 +42,7 @@ export default function Navbar() {
                 Olivier Pastorel
               </p>
               <p className={`text-[10px] leading-none mt-0.5 tracking-[0.15em] uppercase transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
-                {lang === 'fr' ? 'Gestion de patrimoine' : 'Wealth Management'}
+                Gestion Financière Stratégique
               </p>
             </div>
           </Link>
@@ -64,14 +64,6 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden md:flex items-center gap-5">
-            <button
-              onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-              className={`text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 cursor-pointer ${
-                scrolled ? 'text-[#78716C] hover:text-[#1C1917]' : 'text-white/60 hover:text-white'
-              }`}
-            >
-              {lang === 'fr' ? 'EN' : 'FR'}
-            </button>
             <Link
               href="/contact"
               className="bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 font-semibold hover:bg-[#D4B87A] transition-colors duration-200 cursor-pointer"
@@ -114,13 +106,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="px-8 pb-12 flex items-center justify-between">
-          <button
-            onClick={() => { setLang(lang === 'fr' ? 'en' : 'fr'); setOpen(false); }}
-            className="text-white/40 text-sm tracking-[0.2em] uppercase hover:text-white transition-colors cursor-pointer"
-          >
-            {lang === 'fr' ? 'English' : 'Français'}
-          </button>
+        <div className="px-8 pb-12 flex items-center justify-end">
           <Link
             href="/contact"
             onClick={() => setOpen(false)}

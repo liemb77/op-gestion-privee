@@ -80,26 +80,20 @@ const APPROACH = [
 const STATS = [
   { value: 5,  suffix: '',  label: { fr: "Domaines d'expertise", en: 'Areas of expertise' } },
   { value: 3,  suffix: '',  label: { fr: "Étapes d'accompagnement", en: 'Steps in our process' } },
-  { value: 6,  suffix: '+', label: { fr: 'Partenaires assureurs', en: 'Insurance partners' } },
-  { value: 2,  suffix: '',  label: { fr: 'Professionnels dédiés', en: 'Dedicated professionals' } },
+  { value: 15, suffix: '+', label: { fr: 'Partenaires assureurs', en: 'Insurance partners' } },
+  { value: 3,  suffix: '',  label: { fr: 'Professionnels dédiés', en: 'Dedicated professionals' } },
 ];
 
-/* TODO: Replace these with real client testimonials before going live */
 const TESTIMONIALS = [
   {
-    quote: { fr: "Olivier a complètement transformé ma vision de la retraite. Sa rigueur, son écoute et la clarté de son approche m'ont permis de prendre des décisions éclairées pour la première fois.", en: "Olivier completely transformed my vision of retirement. His rigor, attentiveness, and clear approach allowed me to make informed decisions for the first time." },
-    name: 'Marie-Hélène Bergeron',
-    role: { fr: 'Professeure, Longueuil', en: 'Teacher, Longueuil' },
+    quote: { fr: "Je recommande les services d'Olivier Pastorel. J'ai fait affaire avec lui suite à un héritage et je ne suis pas déçu. L'accompagnement est personnalisé et adapté à nos besoins. On n'est pas seulement un numéro et l'offre complète de services financiers a permis de répondre de façon optimisée à tous nos besoins en ayant une vision claire pour atteindre nos objectifs.", en: "" },
+    name: 'Simon Langlois',
+    role: { fr: '', en: '' },
   },
   {
-    quote: { fr: "Un conseiller qui prend vraiment le temps de comprendre votre situation. Je recommande sans hésiter à quiconque cherche une approche personnalisée, transparente et de confiance.", en: "An advisor who truly takes the time to understand your situation. I recommend without hesitation to anyone seeking a personalized and trustworthy approach." },
-    name: 'François Leblanc',
-    role: { fr: "Chef d'entreprise, Beloeil", en: 'Business owner, Beloeil' },
-  },
-  {
-    quote: { fr: "Grâce à la planification que nous avons mise en place ensemble, je dors enfin tranquille. Professionnel, disponible et toujours orienté vers mes intérêts.", en: "Thanks to the plan we put in place together, I can finally sleep soundly. Professional, available, and always focused on my interests." },
-    name: 'Sylvie Durocher',
-    role: { fr: 'Retraitée, Brossard', en: 'Retired, Brossard' },
+    quote: { fr: "Travailler avec Olivier Pastorel, c'est prendre ce qu'on a de précieux, nos finances, pour en faire un projet à notre mesure. C'est recevoir des conseils, avoir des options et sentir qu'au final, on a le choix. Le tout dans un sentiment de sécurité, de respect et de convivialité.", en: "" },
+    name: 'Marie-Hélène Ladouceur Parent',
+    role: { fr: '', en: '' },
   },
 ];
 
@@ -126,7 +120,11 @@ const FAQ_ITEMS = [
   },
 ];
 
-const PARTNERS = ['Sun Life', 'Manulife', 'Canada Life', 'iA Groupe Financier', 'Desjardins', 'Empire Life'];
+const PARTNERS = [
+  'Manuvie', 'Canada Vie', 'Équitable', 'Union Vie', 'Empire', 'Sun Life',
+  'Industrielle Alliance', 'Humania', 'Assomption', 'RBC Assurances',
+  'BMO Assurances', 'Beneva', 'Croix Bleue', 'Ivari', 'Securiglobe',
+];
 
 const serviceIcons: Record<string, ReactElement> = {
   investissement: (<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.94" /></svg>),
@@ -208,7 +206,7 @@ export default function HomePage() {
         className="relative min-h-screen flex items-end overflow-hidden"
         style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=2560&q=90)', backgroundSize: 'cover', backgroundPosition: 'center 30%' }}
       >
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.18) 0%, rgba(12,27,46,0.45) 45%, rgba(12,27,46,0.93) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.4) 0%, rgba(12,27,46,0.68) 45%, rgba(12,27,46,0.97) 100%)' }} />
         <div className="relative w-full max-w-6xl mx-auto px-8 pb-20 md:pb-28">
           <div className="max-w-3xl">
             <p className="hero-fade delay-200 text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-5 font-light">OP Gestion Privée &nbsp;·&nbsp; Beloeil, Québec</p>
@@ -237,12 +235,26 @@ export default function HomePage() {
 
       {/* ─── PARTNERS STRIP ──────────────────────────────────────────────── */}
       <section className="bg-white border-b border-[#E7E5E0]">
-        <div className="max-w-6xl mx-auto px-8 py-5 flex flex-wrap items-center gap-x-8 gap-y-3 justify-center">
-          <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">{lang === 'fr' ? 'Partenaires assureurs' : 'Insurance Partners'}</span>
-          <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
-          {PARTNERS.map((p, i) => (
-            <span key={p} className={`text-xs tracking-wide font-light ${i % 2 === 0 ? 'text-[#78716C]/70' : 'text-[#78716C]/50'}`}>{p}</span>
-          ))}
+        <div className="max-w-6xl mx-auto px-8 py-4 flex flex-col gap-3">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+            <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Partenaires assureurs</span>
+            <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
+            {PARTNERS.map((p, i) => (
+              <span key={p} className={`text-xs tracking-wide font-light ${i % 2 === 0 ? 'text-[#78716C]/70' : 'text-[#78716C]/50'}`}>{p}</span>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center border-t border-[#E7E5E0] pt-3">
+            <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Épargne collective</span>
+            <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
+            <a
+              href="#"
+              className="text-xs tracking-wide font-light text-[#C4A35A] hover:text-[#1C1917] transition-colors duration-200 flex items-center gap-1.5"
+            >
+              Cloutier Groupe Financier
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+            </a>
+            <span className="text-[#78716C]/50 text-[10px]">— Connexion investisseurs</span>
+          </div>
         </div>
       </section>
 
@@ -422,7 +434,7 @@ export default function HomePage() {
             <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-4">{lang === 'fr' ? 'Témoignages' : 'Testimonials'}</p>
             <h2 className="font-serif text-4xl md:text-5xl text-[#1C1917] font-medium leading-tight">{lang === 'fr' ? 'Ce que disent nos clients.' : 'What our clients say.'}</h2>
           </AnimFade>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             {TESTIMONIALS.map((testimonial, i) => (
               <AnimFade key={i} delay={i * 120}>
                 <div className="bg-white border border-[#E7E5E0] p-8 md:p-10 flex flex-col gap-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">

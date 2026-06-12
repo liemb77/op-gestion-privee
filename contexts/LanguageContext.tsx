@@ -1,7 +1,7 @@
 'use client';
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 
-export type Lang = 'fr' | 'en';
+export type Lang = 'fr';
 
 interface LangCtx {
   lang: Lang;
@@ -11,20 +11,8 @@ interface LangCtx {
 const LanguageContext = createContext<LangCtx>({ lang: 'fr', setLang: () => {} });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('fr');
-
-  useEffect(() => {
-    const saved = localStorage.getItem('op-lang');
-    if (saved === 'en') setLang('en');
-  }, []);
-
-  const handleSetLang = (l: Lang) => {
-    setLang(l);
-    localStorage.setItem('op-lang', l);
-  };
-
   return (
-    <LanguageContext.Provider value={{ lang, setLang: handleSetLang }}>
+    <LanguageContext.Provider value={{ lang: 'fr', setLang: () => {} }}>
       {children}
     </LanguageContext.Provider>
   );

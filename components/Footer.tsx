@@ -27,7 +27,7 @@ export default function Footer() {
               <div>
                 <p className="font-serif text-sm text-white font-semibold leading-none">Olivier Pastorel</p>
                 <p className="text-white/35 text-[10px] leading-none mt-1 tracking-[0.15em] uppercase">
-                  {lang === 'fr' ? 'Gestion de patrimoine' : 'Wealth Management'}
+                  Gestion Financière Stratégique
                 </p>
               </div>
             </div>

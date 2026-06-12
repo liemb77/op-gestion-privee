@@ -49,7 +49,7 @@ export const t = {
           id: 'investissement',
           title: 'Stratégies d\'investissement',
           short: 'Portefeuilles gérés et diversifiés, adaptés à vos objectifs et à votre tolérance au risque.',
-          body: `Nous élaborons une stratégie d'investissement prudente basée sur vos objectifs et votre tolérance au risque, puis nous la mettons en œuvre de façon régulière et disciplinée.
+          body: `Nous élaborons une stratégie d'investissement optimisée basée sur vos objectifs et votre tolérance au risque, puis nous la mettons en œuvre de façon régulière et disciplinée.
 
 Contrairement à l'investisseur moyen, vous aurez accès à une série exclusive de portefeuilles gérés, adaptés à vos besoins spécifiques de liquidités, à vos attentes de croissance et à votre situation. Ces portefeuilles utilisent des techniques éprouvées de répartition d'actifs et de diversification sous la direction de gestionnaires de portefeuille expérimentés.
 
@@ -177,7 +177,7 @@ Les stratégies fiscales intelligentes comprennent entre autres :
           id: 'investissement',
           title: 'Investment Strategies',
           short: 'Managed, diversified portfolios tailored to your goals and risk tolerance.',
-          body: `We develop a prudent investment strategy based on your goals and risk tolerance, then implement it regularly and in a disciplined manner.
+          body: `We develop an optimized investment strategy based on your goals and risk tolerance, then implement it regularly and in a disciplined manner.
 
 Unlike the average investor, you will have access to an exclusive series of managed portfolios, adapted to your specific liquidity needs, growth expectations, and situation. These portfolios use proven asset allocation and diversification techniques under the direction of experienced portfolio managers.
 
