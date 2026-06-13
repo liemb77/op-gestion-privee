@@ -209,7 +209,7 @@ export default function HomePage() {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.4) 0%, rgba(12,27,46,0.68) 45%, rgba(12,27,46,0.97) 100%)' }} />
         <div className="relative w-full max-w-6xl mx-auto px-8 pb-20 md:pb-28">
           <div className="max-w-3xl">
-            <p className="hero-fade delay-200 text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-5 font-light">OP Gestion Privée &nbsp;·&nbsp; Beloeil, Québec</p>
+            <p className="hero-fade delay-200 text-white/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-light">OP Gestion Privée &nbsp;·&nbsp; Beloeil, Québec</p>
             <div className="hero-fade delay-400 h-[1px] bg-[#C4A35A] mb-7" style={{ width: '3rem' }} />
             <h1 className="hero-animate delay-400 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-7">
               {lang === 'fr' ? <>Exploitez tout le potentiel<br className="hidden sm:block" /> de votre patrimoine.</> : <>Unlock the full potential<br className="hidden sm:block" /> of your wealth.</>}

@@ -33,9 +33,9 @@ export default function AboutPage() {
       <section
         className="relative h-72 md:h-96 flex items-end overflow-hidden"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2560&q=85)',
+          backgroundImage: 'url(/gallery/revelstoke.jpeg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center 45%',
+          backgroundPosition: 'center 40%',
         }}
       >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.2) 0%, rgba(12,27,46,0.85) 100%)' }} />
@@ -143,46 +143,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="bg-[#F9F8F4] py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-8">
-          <AnimFade className="mb-12">
-            <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-4">Galerie</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#1C1917] font-medium leading-tight">Nos horizons</h2>
-          </AnimFade>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            <AnimFade delay={0} className="col-span-2 md:col-span-2 md:row-span-2">
-              <div className="h-64 md:h-full overflow-hidden">
-                <img src="/gallery/gasp-sunset.jpeg" alt="Coucher de soleil, Gaspésie" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
-            </AnimFade>
-            <AnimFade delay={80}>
-              <div className="h-48 md:h-56 overflow-hidden">
-                <img src="/gallery/lac-louise.jpeg" alt="Lac Louise, Alberta" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
-            </AnimFade>
-            <AnimFade delay={160}>
-              <div className="h-48 md:h-56 overflow-hidden">
-                <img src="/gallery/mont-blanc.jpg" alt="Mont Blanc, France" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
-            </AnimFade>
-            <AnimFade delay={240}>
-              <div className="h-48 md:h-56 overflow-hidden">
-                <img src="/gallery/lac-moraine.jpeg" alt="Lac Moraine, Alberta" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
-            </AnimFade>
-            <AnimFade delay={320}>
-              <div className="h-48 md:h-56 overflow-hidden">
-                <img src="/gallery/revelstoke.jpeg" alt="Revelstoke, BC" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              </div>
-            </AnimFade>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="bg-[#1C1917] py-20">
-        <div className="max-w-6xl mx-auto px-8 text-center">
+      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 60%' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/80" />
+        <div className="relative max-w-6xl mx-auto px-8 text-center">
           <AnimFade>
             <h2 className="font-serif text-3xl md:text-4xl text-white font-medium mb-4">{T.about.ctaTitle}</h2>
             <p className="text-white/50 mb-8 text-sm font-light">{T.about.ctaText}</p>

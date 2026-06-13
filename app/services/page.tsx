@@ -33,9 +33,9 @@ export default function ServicesPage() {
       <section
         className="relative h-72 md:h-96 flex items-end overflow-hidden"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1527489377706-5bf97e608852?auto=format&fit=crop&w=2560&q=85)',
+          backgroundImage: 'url(/gallery/lac-louise.jpeg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center 25%',
+          backgroundPosition: 'center 40%',
         }}
       >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.25) 0%, rgba(12,27,46,0.88) 100%)' }} />
@@ -96,8 +96,9 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1C1917] py-20">
-        <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 30%' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/82" />
+        <div className="relative max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <AnimFade>
             <h2 className="font-serif text-2xl md:text-3xl text-white font-medium">{T.services.ctaTitle}</h2>
             <p className="text-white/50 mt-2 text-sm font-light">{T.services.ctaText}</p>
