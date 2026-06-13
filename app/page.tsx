@@ -207,7 +207,7 @@ export default function HomePage() {
         style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=2560&q=90)', backgroundSize: 'cover', backgroundPosition: 'center 30%' }}
       >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.4) 0%, rgba(12,27,46,0.68) 45%, rgba(12,27,46,0.97) 100%)' }} />
-        <div className="relative w-full max-w-6xl mx-auto px-8 pb-20 md:pb-28">
+        <div className="relative w-full max-w-6xl mx-auto px-8 pb-28 md:pb-36">
           <div className="max-w-3xl">
             <p className="hero-fade delay-200 text-white/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-light">OP Gestion Privée &nbsp;·&nbsp; Beloeil, Québec</p>
             <div className="hero-fade delay-400 h-[1px] bg-[#C4A35A] mb-7" style={{ width: '3rem' }} />
@@ -227,31 +227,23 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 right-8 hidden md:flex flex-col items-center gap-2 hero-fade delay-1000">
-          <span className="text-white/30 text-[10px] tracking-[0.3em] uppercase rotate-90 mb-4">Scroll</span>
-          <div className="w-[1px] h-10 bg-gradient-to-b from-white/0 to-white/30" />
-        </div>
-      </section>
-
-      {/* ─── PARTNERS STRIP ──────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-[#E7E5E0]">
-        {/* Insurance partners — scrolling ticker */}
-        <div className="py-4 border-b border-[#E7E5E0]">
-          <div className="flex items-center gap-6 px-8 mb-3">
-            <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Partenaires assureurs</span>
-          </div>
+        {/* ─── PARTNERS TICKER — inside hero at the very bottom ─── */}
+        <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-black/40 backdrop-blur-sm py-3">
           <div
-            className="overflow-hidden relative"
-            style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)' }}
+            className="overflow-hidden"
+            style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)' }}
           >
-            <div className="animate-marquee gap-x-10" style={{ display: 'flex', width: 'max-content' }}>
+            <div className="animate-marquee" style={{ gap: '3rem' }}>
               {[...PARTNERS, ...PARTNERS].map((p, i) => (
-                <span key={i} className="text-xs tracking-widest font-light text-[#78716C]/60 uppercase whitespace-nowrap">{p}</span>
+                <span key={i} className="text-[#C4A35A] text-[10px] tracking-[0.35em] uppercase whitespace-nowrap font-light">{p}</span>
               ))}
             </div>
           </div>
         </div>
-        {/* Épargne collective — static */}
+      </section>
+
+      {/* ─── CLOUTIER STRIP ──────────────────────────────────────────────── */}
+      <section className="bg-white border-b border-[#E7E5E0]">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center px-8 py-3">
           <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Épargne collective</span>
           <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
