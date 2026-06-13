@@ -235,26 +235,34 @@ export default function HomePage() {
 
       {/* ─── PARTNERS STRIP ──────────────────────────────────────────────── */}
       <section className="bg-white border-b border-[#E7E5E0]">
-        <div className="max-w-6xl mx-auto px-8 py-4 flex flex-col gap-3">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center">
+        {/* Insurance partners — scrolling ticker */}
+        <div className="py-4 border-b border-[#E7E5E0]">
+          <div className="flex items-center gap-6 px-8 mb-3">
             <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Partenaires assureurs</span>
-            <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
-            {PARTNERS.map((p, i) => (
-              <span key={p} className={`text-xs tracking-wide font-light ${i % 2 === 0 ? 'text-[#78716C]/70' : 'text-[#78716C]/50'}`}>{p}</span>
-            ))}
           </div>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center border-t border-[#E7E5E0] pt-3">
-            <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Épargne collective</span>
-            <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
-            <a
-              href="#"
-              className="text-xs tracking-wide font-light text-[#C4A35A] hover:text-[#1C1917] transition-colors duration-200 flex items-center gap-1.5"
-            >
-              Cloutier Groupe Financier
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-            </a>
-            <span className="text-[#78716C]/50 text-[10px]">— Connexion investisseurs</span>
+          <div
+            className="overflow-hidden relative"
+            style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)' }}
+          >
+            <div className="animate-marquee gap-x-10" style={{ display: 'flex', width: 'max-content' }}>
+              {[...PARTNERS, ...PARTNERS].map((p, i) => (
+                <span key={i} className="text-xs tracking-widest font-light text-[#78716C]/60 uppercase whitespace-nowrap">{p}</span>
+              ))}
+            </div>
           </div>
+        </div>
+        {/* Épargne collective — static */}
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center px-8 py-3">
+          <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Épargne collective</span>
+          <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
+          <a
+            href="#"
+            className="text-xs tracking-wide font-light text-[#C4A35A] hover:text-[#1C1917] transition-colors duration-200 flex items-center gap-1.5"
+          >
+            Cloutier Groupe Financier
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+          </a>
+          <span className="text-[#78716C]/50 text-[10px]">— Connexion investisseurs</span>
         </div>
       </section>
 
