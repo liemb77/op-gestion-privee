@@ -40,7 +40,7 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.2) 0%, rgba(12,27,46,0.85) 100%)' }} />
         <div className="relative max-w-6xl mx-auto px-8 pb-12 w-full">
-          <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">OP Gestion Privée</p>
+          <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">Olivier Pastorel</p>
           <h1 className="font-serif text-5xl md:text-6xl text-white font-medium">{T.about.pageTitle}</h1>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               <div
                 className="relative z-10 aspect-[3/4] max-w-sm overflow-hidden"
                 style={{
-                  backgroundImage: 'url(https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=600&q=85)',
+                  backgroundImage: 'url(/gallery/olivier-pastorel.jpg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center top',
                 }}
@@ -100,18 +100,7 @@ export default function AboutPage() {
         {/* Aurelie */}
         <div className="border-t border-[#E7E5E0] pt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-            <AnimFade>
-              <div
-                className="aspect-square overflow-hidden"
-                style={{
-                  backgroundImage: 'url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center top',
-                  maxWidth: '260px',
-                }}
-              />
-            </AnimFade>
-            <AnimFade delay={200} className="md:col-span-2 pt-2">
+            <AnimFade delay={200} className="md:col-span-3 pt-2">
               <h3 className="font-serif text-3xl text-[#1C1917] font-medium mb-1">{T.about.aurelieTitle}</h3>
               <p className="text-[#78716C] text-sm italic font-serif mb-5">{T.about.aurelieRole}</p>
               <div className="w-6 h-[1px] bg-[#C4A35A] mb-5" />
@@ -126,15 +115,7 @@ export default function AboutPage() {
         {/* Doris */}
         <div className="border-t border-[#E7E5E0] pt-16 mt-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-            <AnimFade>
-              <div
-                className="aspect-square overflow-hidden bg-[#F9F8F4] flex items-center justify-center"
-                style={{ maxWidth: '260px' }}
-              >
-                <span className="font-serif text-4xl text-[#C4A35A]/40">DL</span>
-              </div>
-            </AnimFade>
-            <AnimFade delay={200} className="md:col-span-2 pt-2">
+            <AnimFade delay={200} className="md:col-span-3 pt-2">
               <h3 className="font-serif text-3xl text-[#1C1917] font-medium mb-1">Doris Longpré</h3>
               <p className="text-[#78716C] text-sm italic font-serif mb-5">Adjointe administrative</p>
               <div className="w-6 h-[1px] bg-[#C4A35A] mb-5" />
@@ -144,8 +125,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 60%' }}>
-        <div className="absolute inset-0 bg-[#0C1B2E]/80" />
+      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/55" />
         <div className="relative max-w-6xl mx-auto px-8 text-center">
           <AnimFade>
             <h2 className="font-serif text-3xl md:text-4xl text-white font-medium mb-4">{T.about.ctaTitle}</h2>

@@ -40,7 +40,7 @@ export default function ServicesPage() {
       >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.25) 0%, rgba(12,27,46,0.88) 100%)' }} />
         <div className="relative max-w-6xl mx-auto px-8 pb-12 w-full">
-          <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">OP Gestion Privée</p>
+          <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">Olivier Pastorel</p>
           <h1 className="font-serif text-5xl md:text-6xl text-white font-medium leading-tight">
             {T.services.pageTitle}
           </h1>
@@ -96,8 +96,8 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 30%' }}>
-        <div className="absolute inset-0 bg-[#0C1B2E]/82" />
+      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/55" />
         <div className="relative max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <AnimFade>
             <h2 className="font-serif text-2xl md:text-3xl text-white font-medium">{T.services.ctaTitle}</h2>

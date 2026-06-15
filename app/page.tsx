@@ -81,18 +81,22 @@ const STATS = [
   { value: 5,  suffix: '',  label: { fr: "Domaines d'expertise", en: 'Areas of expertise' } },
   { value: 3,  suffix: '',  label: { fr: "Étapes d'accompagnement", en: 'Steps in our process' } },
   { value: 15, suffix: '+', label: { fr: 'Partenaires assureurs', en: 'Insurance partners' } },
-  { value: 3,  suffix: '',  label: { fr: 'Professionnels dédiés', en: 'Dedicated professionals' } },
 ];
 
 const TESTIMONIALS = [
   {
-    quote: { fr: "Je recommande les services d'Olivier Pastorel. J'ai fait affaire avec lui suite à un héritage et je ne suis pas déçu. L'accompagnement est personnalisé et adapté à nos besoins. On n'est pas seulement un numéro et l'offre complète de services financiers a permis de répondre de façon optimisée à tous nos besoins en ayant une vision claire pour atteindre nos objectifs.", en: "" },
+    quote: { fr: "Je recommande les services d'Olivier Pastorel. J'ai fait affaire avec lui suite à un héritage et je ne suis pas déçu. L'accompagnement est personnalisé et adapté à nos besoins. On n'est pas seulement un numéro et l'offre complète de services financiers a permis de répondre de façon optimisée à tous nos besoins en ayant une vision claire pour atteindre nos objectifs.", en: "I recommend Olivier Pastorel's services. I worked with him following an inheritance and I am not disappointed. The support is personalized and adapted to our needs. You are never just a number, and the complete range of financial services allowed us to meet all our needs optimally with a clear vision to reach our goals." },
     name: 'Simon Langlois',
     role: { fr: '', en: '' },
   },
   {
-    quote: { fr: "Travailler avec Olivier Pastorel, c'est prendre ce qu'on a de précieux, nos finances, pour en faire un projet à notre mesure. C'est recevoir des conseils, avoir des options et sentir qu'au final, on a le choix. Le tout dans un sentiment de sécurité, de respect et de convivialité.", en: "" },
+    quote: { fr: "Travailler avec Olivier Pastorel, c'est prendre ce qu'on a de précieux, nos finances, pour en faire un projet à notre mesure. C'est recevoir des conseils, avoir des options et sentir qu'au final, on a le choix. Le tout dans un sentiment de sécurité, de respect et de convivialité.", en: "Working with Olivier Pastorel means taking what we hold most precious — our finances — and turning them into a project tailored to us. It means receiving advice, having options, and feeling that ultimately, the choice is ours. All within a sense of security, respect, and warmth." },
     name: 'Marie-Hélène Ladouceur Parent',
+    role: { fr: '', en: '' },
+  },
+  {
+    quote: { fr: "Ce que nous apprécions le plus chez Olivier, c'est sa volonté sincère de trouver les meilleures solutions en fonction de notre réalité et de nos objectifs. Il prend le temps de faire un portrait complet de notre situation. On ne sent jamais qu'il cherche à vendre un produit en particulier; son approche est avant tout axée sur nos besoins. Il est très disponible, toujours convivial et inspire immédiatement confiance. Nous le recommandons sans hésitation!", en: "What we appreciate most about Olivier is his sincere desire to find the best solutions based on our reality and goals. He takes the time to build a complete picture of our situation. You never feel he is trying to sell a particular product — his approach is always centered on our needs. He is highly available, always warm, and immediately inspires trust. We recommend him without hesitation!" },
+    name: 'Mélanie Lajoie et Thierry Chauveau',
     role: { fr: '', en: '' },
   },
 ];
@@ -209,7 +213,6 @@ export default function HomePage() {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.4) 0%, rgba(12,27,46,0.68) 45%, rgba(12,27,46,0.97) 100%)' }} />
         <div className="relative w-full max-w-6xl mx-auto px-8 pb-28 md:pb-36">
           <div className="max-w-3xl">
-            <p className="hero-fade delay-200 text-white/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-light">OP Gestion Privée &nbsp;·&nbsp; Beloeil, Québec</p>
             <div className="hero-fade delay-400 h-[1px] bg-[#C4A35A] mb-7" style={{ width: '3rem' }} />
             <h1 className="hero-animate delay-400 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-[1.05] mb-7">
               {lang === 'fr' ? <>Exploitez tout le potentiel<br className="hidden sm:block" /> de votre patrimoine.</> : <>Unlock the full potential<br className="hidden sm:block" /> of your wealth.</>}
@@ -248,7 +251,9 @@ export default function HomePage() {
           <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Épargne collective</span>
           <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
           <a
-            href="#"
+            href="https://investisseurweb.groupecloutierinvestissement.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs tracking-wide font-light text-[#C4A35A] hover:text-[#1C1917] transition-colors duration-200 flex items-center gap-1.5"
           >
             Cloutier Groupe Financier
@@ -383,7 +388,7 @@ export default function HomePage() {
       {/* ─── STATS ───────────────────────────────────────────────────────── */}
       <section className="bg-[#F9F8F4] border-b border-[#E7E5E0]">
         <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#E7E5E0]">
+          <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-[#E7E5E0]">
             {STATS.map((stat, i) => (
               <AnimFade key={i} delay={i * 100}>
                 <div className="flex flex-col items-center justify-center py-12 px-6 text-center gap-2">
@@ -404,7 +409,7 @@ export default function HomePage() {
           <AnimFade>
             <div className="relative">
               <div className="absolute -top-3 -left-3 w-full h-full border border-[#C4A35A]/40 z-0" />
-              <div className="relative z-10 aspect-[3/4] overflow-hidden" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=800&q=85)', backgroundSize: 'cover', backgroundPosition: 'center top' }}>
+              <div className="relative z-10 aspect-[3/4] overflow-hidden" style={{ backgroundImage: 'url(/gallery/olivier-pastorel.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top' }}>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1C1917]/80 to-transparent p-6">
                   <p className="font-serif text-white text-lg">Olivier Pastorel</p>
                   <p className="text-white/60 text-[11px] tracking-[0.15em] uppercase mt-0.5">{lang === 'fr' ? 'Conseiller en sécurité financière' : 'Financial Security Advisor'}</p>
