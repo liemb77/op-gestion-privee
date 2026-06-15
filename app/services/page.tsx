@@ -96,8 +96,8 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-        <div className="absolute inset-0 bg-[#0C1B2E]/55" />
+      <section className="relative py-40 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center', minHeight: '480px' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/40" />
         <div className="relative max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <AnimFade>
             <h2 className="font-serif text-2xl md:text-3xl text-white font-medium">{T.services.ctaTitle}</h2>
