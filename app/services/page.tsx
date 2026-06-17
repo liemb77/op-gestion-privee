@@ -99,7 +99,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section
         className="relative py-24 md:py-32 overflow-hidden"
-        style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundAttachment: 'fixed' }}
+        style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundAttachment: 'fixed', minHeight: '500px' }}
       >
         <div className="absolute inset-0 bg-[#0C1B2E]/70" />
         <div className="relative max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
