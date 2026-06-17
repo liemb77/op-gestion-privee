@@ -39,7 +39,7 @@ export default function AboutPage() {
           minHeight: '60vh',
         }}
       >
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.05) 0%, rgba(12,27,46,0.65) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.35) 0%, rgba(12,27,46,0.7) 45%, rgba(12,27,46,0.92) 100%)' }} />
         <div className="relative max-w-6xl mx-auto px-8 pb-12 w-full">
           <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">Olivier Pastorel</p>
           <h1 className="font-serif text-5xl md:text-6xl text-white font-medium">{T.about.pageTitle}</h1>
