@@ -97,21 +97,22 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden">
-        <img src="/gallery/mont-blanc.jpg" alt="" className="w-full block" />
-        <div className="absolute inset-0 bg-[#0C1B2E]/25 flex items-center">
-          <div className="max-w-6xl mx-auto px-8 w-full flex flex-col md:flex-row items-center justify-between gap-8">
-            <AnimFade>
-              <h2 className="font-serif text-2xl md:text-3xl text-white font-medium">{T.services.ctaTitle}</h2>
-              <p className="text-white/50 mt-2 text-sm font-light">{T.services.ctaText}</p>
-            </AnimFade>
-            <Link
-              href="/contact"
-              className="shrink-0 bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.2em] uppercase px-8 py-4 font-semibold hover:bg-[#D4B87A] transition-colors cursor-pointer"
-            >
-              {T.services.ctaBtn}
-            </Link>
-          </div>
+      <section
+        className="relative py-24 md:py-28 overflow-hidden"
+        style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundAttachment: 'fixed' }}
+      >
+        <div className="absolute inset-0 bg-[#0C1B2E]/70" />
+        <div className="relative max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+          <AnimFade>
+            <h2 className="font-serif text-2xl md:text-3xl text-white font-medium">{T.services.ctaTitle}</h2>
+            <p className="text-white/50 mt-2 text-sm font-light">{T.services.ctaText}</p>
+          </AnimFade>
+          <Link
+            href="/contact"
+            className="shrink-0 bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.2em] uppercase px-8 py-4 font-semibold hover:bg-[#D4B87A] transition-colors cursor-pointer"
+          >
+            {T.services.ctaBtn}
+          </Link>
         </div>
       </section>
     </>

@@ -126,21 +126,22 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden">
-        <img src="/gallery/gasp-sunset.jpeg" alt="" className="w-full block" />
-        <div className="absolute inset-0 bg-[#0C1B2E]/30 flex items-center">
-          <div className="max-w-6xl mx-auto px-8 w-full text-center">
-            <AnimFade>
-              <h2 className="font-serif text-3xl md:text-4xl text-white font-medium mb-4">{T.about.ctaTitle}</h2>
-              <p className="text-white/50 mb-8 text-sm font-light">{T.about.ctaText}</p>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.2em] uppercase px-8 py-4 font-semibold hover:bg-[#D4B87A] transition-colors cursor-pointer"
-              >
-                {T.about.ctaBtn}
-              </Link>
-            </AnimFade>
-          </div>
+      <section
+        className="relative py-24 md:py-28 overflow-hidden"
+        style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundAttachment: 'fixed' }}
+      >
+        <div className="absolute inset-0 bg-[#0C1B2E]/70" />
+        <div className="relative max-w-6xl mx-auto px-8 text-center">
+          <AnimFade>
+            <h2 className="font-serif text-3xl md:text-4xl text-white font-medium mb-4">{T.about.ctaTitle}</h2>
+            <p className="text-white/50 mb-8 text-sm font-light">{T.about.ctaText}</p>
+            <Link
+              href="/contact"
+              className="inline-block bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.2em] uppercase px-8 py-4 font-semibold hover:bg-[#D4B87A] transition-colors cursor-pointer"
+            >
+              {T.about.ctaBtn}
+            </Link>
+          </AnimFade>
         </div>
       </section>
     </>
