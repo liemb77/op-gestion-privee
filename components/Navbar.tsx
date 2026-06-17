@@ -42,7 +42,7 @@ export default function Navbar() {
                 Olivier Pastorel
               </p>
               <p className={`text-[10px] leading-none mt-0.5 tracking-[0.15em] uppercase transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
-                Gestion Financière Stratégique
+                {lang === 'fr' ? 'Gestion Financière Stratégique' : 'Strategic Financial Management'}
               </p>
             </div>
           </Link>
