@@ -127,7 +127,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section
-        className="relative py-24 md:py-28 overflow-hidden"
+        className="relative py-24 md:py-32 overflow-hidden"
         style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 60%', backgroundAttachment: 'fixed' }}
       >
         <div className="absolute inset-0 bg-[#0C1B2E]/70" />
