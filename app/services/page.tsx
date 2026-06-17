@@ -31,14 +31,17 @@ export default function ServicesPage() {
     <>
       {/* Header */}
       <section
-        className="relative h-72 md:h-96 flex items-end overflow-hidden"
+        className="relative flex items-end overflow-hidden"
         style={{
           backgroundImage: 'url(/gallery/lac-louise.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 40%',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundColor: '#0C1B2E',
+          minHeight: '420px',
         }}
       >
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.25) 0%, rgba(12,27,46,0.88) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.0) 0%, rgba(12,27,46,0.75) 100%)' }} />
         <div className="relative max-w-6xl mx-auto px-8 pb-12 w-full">
           <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">Olivier Pastorel</p>
           <h1 className="font-serif text-5xl md:text-6xl text-white font-medium leading-tight">
@@ -96,8 +99,8 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-40 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center', minHeight: '480px' }}>
-        <div className="absolute inset-0 bg-[#0C1B2E]/40" />
+      <section className="relative py-24 overflow-hidden" style={{ backgroundImage: 'url(/gallery/mont-blanc.jpg)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: '#0C1B2E', minHeight: '480px' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/15" />
         <div className="relative max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <AnimFade>
             <h2 className="font-serif text-2xl md:text-3xl text-white font-medium">{T.services.ctaTitle}</h2>

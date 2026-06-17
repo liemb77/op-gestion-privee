@@ -142,7 +142,8 @@ export default function ContactPage() {
             <div className="w-full h-0.5 bg-[#EDEBE4]" />
 
             <div>
-              <p className="text-[#C4A35A] text-[10px] tracking-[0.3em] uppercase mb-3">{T.aurelieLabel}</p>
+              <p className="text-[#C4A35A] text-[10px] tracking-[0.3em] uppercase mb-1">{T.aurelieLabel}</p>
+              <p className="text-[#5A6A7A] text-[10px] italic mb-3">{t[lang].about.aurelieRole}</p>
               <div className="space-y-1.5 text-sm text-[#5A6A7A]">
                 <p>
                   <a href="tel:5143778143" className="text-[#162B4A] hover:text-[#C4A35A] transition-colors">

@@ -31,14 +31,17 @@ export default function AboutPage() {
     <>
       {/* Page Header */}
       <section
-        className="relative h-72 md:h-96 flex items-end overflow-hidden"
+        className="relative flex items-end overflow-hidden"
         style={{
           backgroundImage: 'url(/gallery/revelstoke.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 40%',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundColor: '#0C1B2E',
+          minHeight: '420px',
         }}
       >
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.2) 0%, rgba(12,27,46,0.85) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(175deg, rgba(12,27,46,0.0) 0%, rgba(12,27,46,0.75) 100%)' }} />
         <div className="relative max-w-6xl mx-auto px-8 pb-12 w-full">
           <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-3">Olivier Pastorel</p>
           <h1 className="font-serif text-5xl md:text-6xl text-white font-medium">{T.about.pageTitle}</h1>
@@ -125,8 +128,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-        <div className="absolute inset-0 bg-[#0C1B2E]/55" />
+      <section className="relative py-20 overflow-hidden" style={{ backgroundImage: 'url(/gallery/gasp-sunset.jpeg)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: '#0C1B2E' }}>
+        <div className="absolute inset-0 bg-[#0C1B2E]/20" />
         <div className="relative max-w-6xl mx-auto px-8 text-center">
           <AnimFade>
             <h2 className="font-serif text-3xl md:text-4xl text-white font-medium mb-4">{T.about.ctaTitle}</h2>
