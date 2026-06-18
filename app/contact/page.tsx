@@ -12,9 +12,26 @@ export default function ContactPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    setSent(true);
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setSent(true);
+    } catch {
+      alert(lang === 'fr' ? 'Erreur lors de l\'envoi. Veuillez réessayer.' : 'Error sending message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -59,6 +76,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
                     placeholder={T.namePlaceholder}
                     className="w-full px-4 py-3 border border-[#EDEBE4] bg-white text-[#0C1B2E] text-sm placeholder:text-[#5A6A7A]/50 focus:outline-none focus:border-[#162B4A] transition-colors"
@@ -70,6 +88,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     placeholder={T.emailPlaceholder}
                     className="w-full px-4 py-3 border border-[#EDEBE4] bg-white text-[#0C1B2E] text-sm placeholder:text-[#5A6A7A]/50 focus:outline-none focus:border-[#162B4A] transition-colors"
@@ -82,6 +101,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder={T.phonePlaceholder}
                   className="w-full px-4 py-3 border border-[#EDEBE4] bg-white text-[#0C1B2E] text-sm placeholder:text-[#5A6A7A]/50 focus:outline-none focus:border-[#162B4A] transition-colors"
                 />
@@ -91,6 +111,7 @@ export default function ContactPage() {
                   {T.messageLabel}
                 </label>
                 <textarea
+                  name="message"
                   required
                   rows={5}
                   placeholder={T.messagePlaceholder}
