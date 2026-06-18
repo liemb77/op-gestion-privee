@@ -1,7 +1,7 @@
 'use client';
-import { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
-export type Lang = 'fr';
+export type Lang = 'fr' | 'en';
 
 interface LangCtx {
   lang: Lang;
@@ -11,8 +11,9 @@ interface LangCtx {
 const LanguageContext = createContext<LangCtx>({ lang: 'fr', setLang: () => {} });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [lang, setLang] = useState<Lang>('fr');
   return (
-    <LanguageContext.Provider value={{ lang: 'fr', setLang: () => {} }}>
+    <LanguageContext.Provider value={{ lang, setLang }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -6,7 +6,7 @@ import { useScrolled } from '@/hooks/useScrolled';
 import { t } from '@/lib/translations';
 
 export default function Navbar() {
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   const scrolled = useScrolled(60);
   const T = t[lang].nav;
   const [open, setOpen] = useState(false);
@@ -65,6 +65,12 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden md:flex items-center gap-4">
+            <button
+              onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+              className={`text-[11px] tracking-[0.15em] uppercase font-semibold transition-colors duration-200 ${scrolled ? 'text-[#1C1917] hover:text-[#C4A35A]' : 'text-white/80 hover:text-[#C4A35A]'}`}
+            >
+              {lang === 'fr' ? 'EN' : 'FR'}
+            </button>
             <div className={`text-right transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
               <p className="text-[9px] leading-none tracking-[0.12em] uppercase font-light">Gestion Financière Stratégique</p>
               <p className="text-[9px] leading-none tracking-[0.12em] uppercase font-light mt-[3px]">Strategic Financial Management</p>
@@ -117,8 +123,14 @@ export default function Navbar() {
           ))}
         </div>
         <div className="px-8 pb-12 flex flex-col items-start gap-3">
+          <button
+            onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+            className="text-white/60 text-[11px] tracking-[0.15em] uppercase font-semibold hover:text-[#C4A35A] transition-colors"
+          >
+            {lang === 'fr' ? 'EN' : 'FR'}
+          </button>
           <p className="text-white/40 text-[10px] tracking-[0.15em] uppercase">
-            {lang === 'fr' ? 'Gestion Financière Stratégique' : 'Strategic Financial Management'}
+            Gestion Financière Stratégique
           </p>
           <a
             href="https://investisseurweb.groupecloutierinvestissement.com/"
