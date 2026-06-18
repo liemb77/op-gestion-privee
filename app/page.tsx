@@ -245,24 +245,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── CLOUTIER STRIP ──────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-[#E7E5E0]">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center px-8 py-3">
-          <span className="text-[#78716C] text-[10px] tracking-[0.35em] uppercase shrink-0">Épargne collective</span>
-          <div className="w-[1px] h-4 bg-[#E7E5E0] hidden sm:block" />
-          <a
-            href="https://investisseurweb.groupecloutierinvestissement.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs tracking-wide font-light text-[#C4A35A] hover:text-[#1C1917] transition-colors duration-200 flex items-center gap-1.5"
-          >
-            Cloutier Groupe Financier
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-          </a>
-          <span className="text-[#78716C]/50 text-[10px]">— Connexion investisseurs</span>
-        </div>
-      </section>
-
       {/* ─── POURQUOI NOUS CHOISIR (dark section — breaks visual monotony) ── */}
       <section className="bg-[#1C1917] py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-8">

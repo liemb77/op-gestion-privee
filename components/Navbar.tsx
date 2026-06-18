@@ -41,9 +41,10 @@ export default function Navbar() {
               <p className={`font-serif text-sm font-semibold leading-none tracking-wide transition-colors duration-500 ${scrolled ? 'text-[#1C1917]' : 'text-white'}`}>
                 Olivier Pastorel
               </p>
-              <p className={`text-[10px] leading-none mt-0.5 tracking-[0.15em] uppercase transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
-                {lang === 'fr' ? 'Gestion Financière Stratégique' : 'Strategic Financial Management'}
-              </p>
+              <div className={`mt-0.5 transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
+                <p className="text-[9px] leading-none tracking-[0.12em] uppercase">Gestion Financière Stratégique</p>
+                <p className="text-[9px] leading-none tracking-[0.12em] uppercase mt-[3px]">Strategic Financial Management</p>
+              </div>
             </div>
           </Link>
 
@@ -64,9 +65,10 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <span className={`text-[10px] tracking-[0.12em] uppercase font-light transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
-              {lang === 'fr' ? 'Gestion Financière Stratégique' : 'Strategic Financial Management'}
-            </span>
+            <div className={`text-right transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
+              <p className="text-[9px] leading-none tracking-[0.12em] uppercase font-light">Gestion Financière Stratégique</p>
+              <p className="text-[9px] leading-none tracking-[0.12em] uppercase font-light mt-[3px]">Strategic Financial Management</p>
+            </div>
             <a
               href="https://investisseurweb.groupecloutierinvestissement.com/"
               target="_blank"
