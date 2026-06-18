@@ -63,13 +63,21 @@ export default function Navbar() {
           </div>
 
           {/* Right Actions */}
-          <div className="hidden md:flex items-center gap-5">
-            <Link
-              href="/contact"
-              className="bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 font-semibold hover:bg-[#D4B87A] transition-colors duration-200 cursor-pointer"
+          <div className="hidden md:flex items-center gap-4">
+            <span className={`text-[10px] tracking-[0.12em] uppercase font-light transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
+              {lang === 'fr' ? 'Gestion Financière Stratégique' : 'Strategic Financial Management'}
+            </span>
+            <a
+              href="https://investisseurweb.groupecloutierinvestissement.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-1.5 text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 font-semibold transition-colors duration-200 ${scrolled ? 'bg-[#C4A35A] text-[#1C1917] hover:bg-[#D4B87A]' : 'border border-white/30 text-white hover:bg-white/10'}`}
             >
-              {T.cta}
-            </Link>
+              {lang === 'fr' ? 'Connexion Cloutier' : 'Cloutier Login'}
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </a>
           </div>
 
           {/* Mobile Hamburger */}
@@ -106,14 +114,21 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="px-8 pb-12 flex items-center justify-end">
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="bg-[#C4A35A] text-[#1C1917] text-xs tracking-[0.15em] uppercase px-6 py-3 font-semibold cursor-pointer"
+        <div className="px-8 pb-12 flex flex-col items-start gap-3">
+          <p className="text-white/40 text-[10px] tracking-[0.15em] uppercase">
+            {lang === 'fr' ? 'Gestion Financière Stratégique' : 'Strategic Financial Management'}
+          </p>
+          <a
+            href="https://investisseurweb.groupecloutierinvestissement.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#C4A35A] text-[#1C1917] text-xs tracking-[0.15em] uppercase px-6 py-3 font-semibold"
           >
-            {T.cta}
-          </Link>
+            {lang === 'fr' ? 'Connexion Cloutier' : 'Cloutier Login'}
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+          </a>
         </div>
       </div>
     </>
