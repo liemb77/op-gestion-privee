@@ -18,8 +18,9 @@ export async function POST(req: NextRequest) {
     },
   });
 
+  try {
   await transporter.sendMail({
-    from: `"OP Gestion Privée" <${process.env.SMTP_USER}>`,
+    from: '"OP Gestion Privée" <noreply@opgestionprivee.ca>',
     to: process.env.CONTACT_TO,
     replyTo: email,
     subject: `Nouveau message de ${name} — opgestionprivee.ca`,
@@ -42,6 +43,11 @@ export async function POST(req: NextRequest) {
       </div>
     `,
   });
+
+  } catch (err) {
+    console.error('SMTP error:', err);
+    return NextResponse.json({ error: String(err) }, { status: 500 });
+  }
 
   return NextResponse.json({ success: true });
 }
