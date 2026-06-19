@@ -43,7 +43,6 @@ export default function Navbar() {
               </p>
               <div className={`mt-0.5 transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
                 <p className="text-[9px] leading-none tracking-[0.12em] uppercase">Gestion Financière Stratégique</p>
-                <p className="text-[9px] leading-none tracking-[0.12em] uppercase mt-[3px]">Strategic Financial Management</p>
               </div>
             </div>
           </Link>
@@ -73,7 +72,6 @@ export default function Navbar() {
             </button>
             <div className={`text-right transition-colors duration-500 ${scrolled ? 'text-[#78716C]' : 'text-white/60'}`}>
               <p className="text-[9px] leading-none tracking-[0.12em] uppercase font-light">Gestion Financière Stratégique</p>
-              <p className="text-[9px] leading-none tracking-[0.12em] uppercase font-light mt-[3px]">Strategic Financial Management</p>
             </div>
             <a
               href="https://investisseurweb.groupecloutierinvestissement.com/"
