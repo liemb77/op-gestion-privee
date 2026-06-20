@@ -14,14 +14,14 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         api_key: process.env.SMTP2GO_API_KEY,
         to: [process.env.CONTACT_TO],
-        sender: 'OP Gestion Privée <noreply@opgestionprivee.ca>',
+        sender: 'OP Gestion Financière Stratégique <noreply@opgestionprivee.ca>',
         replyto: [email],
         subject: `Nouveau message de ${name} — opgestionprivee.ca`,
         text_body: `Nom: ${name}\nCourriel: ${email}\nTéléphone: ${phone || 'Non fourni'}\n\nMessage:\n${message}`,
         html_body: `
           <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f9f8f5;">
             <div style="background: #162B4A; padding: 24px; margin-bottom: 24px;">
-              <p style="color: #C4A35A; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 4px;">OP Gestion Privée</p>
+              <p style="color: #C4A35A; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 4px;">OP Gestion Financière Stratégique</p>
               <h1 style="color: white; font-size: 20px; margin: 0;">Nouveau message reçu</h1>
             </div>
             <table style="width: 100%; border-collapse: collapse;">

@@ -47,7 +47,7 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 bg-[#0C1B2E]/65" />
         <div className="relative max-w-6xl mx-auto px-6 pb-10 w-full">
-          <p className="text-[#C4A35A] text-xs tracking-[0.3em] uppercase mb-2">OP Gestion Privée</p>
+          <p className="text-[#C4A35A] text-xs tracking-[0.3em] uppercase mb-2">OP Gestion Financière Stratégique</p>
           <h1 className="font-serif text-4xl md:text-5xl text-white font-medium">{T.pageTitle}</h1>
           <p className="text-white/60 mt-2">{T.pageSub}</p>
         </div>
