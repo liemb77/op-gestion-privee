@@ -99,6 +99,11 @@ const TESTIMONIALS = [
     name: 'Mélanie Lajoie et Thierry Chauveau',
     role: { fr: '', en: '' },
   },
+  {
+    quote: { fr: "Olivier offre un service personnalisé avec connaissance du marché à la clé, je le recommande sans hésitation!", en: "Olivier offers a personalized service with key market knowledge, I recommend him without hesitation!" },
+    name: 'François Lalancette',
+    role: { fr: '', en: '' },
+  },
 ];
 
 const FAQ_ITEMS = [
