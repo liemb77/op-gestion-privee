@@ -19,7 +19,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: 'Olivier Pastorel — Gestion de patrimoine',
+  title: 'Olivier Pastorel — Conseiller financier',
   description: 'Conseiller en sécurité financière. Solutions intégrées en investissement, planification de la retraite, fiscalité et planification successorale — Beloeil, Québec.',
   keywords: ['conseiller financier', 'gestion de patrimoine', 'planification retraite', 'Beloeil', 'Québec', 'investissement'],
 };
