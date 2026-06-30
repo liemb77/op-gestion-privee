@@ -62,7 +62,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.07] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/50 text-xs">{T.footer.rights} &nbsp;·&nbsp; Code AMF : 212465</p>
-          <p className="text-white/40 text-xs tracking-wide">opgestionfinancièrestrategique.ca</p>
+          <div className="flex items-center gap-4">
+            <Link href="/politique-de-confidentialite" className="text-white/40 text-xs hover:text-[#C4A35A] transition-colors duration-200 cursor-pointer">
+              {T.footer.privacy}
+            </Link>
+            <p className="text-white/40 text-xs tracking-wide">opgestionfinancièrestrategique.ca</p>
+          </div>
         </div>
       </div>
     </footer>

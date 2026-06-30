@@ -125,6 +125,7 @@ Les stratégies fiscales intelligentes comprennent entre autres :
       rights: '© 2026 Olivier Pastorel. Tous droits réservés.',
       quickLinks: 'Navigation',
       contactInfo: 'Contact',
+      privacy: 'Politique de confidentialité',
     },
   },
   en: {
@@ -253,6 +254,7 @@ Smart tax strategies include:
       rights: '© 2026 Olivier Pastorel. All rights reserved.',
       quickLinks: 'Navigation',
       contactInfo: 'Contact',
+      privacy: 'Privacy Policy',
     },
   },
 };
