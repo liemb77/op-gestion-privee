@@ -2,6 +2,7 @@
 import { LanguageProvider, useLang } from '@/contexts/LanguageContext';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import CookieConsent from './CookieConsent';
 import { ReactNode } from 'react';
 
 function PageContent({ children }: { children: ReactNode }) {
@@ -19,6 +20,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
       <Navbar />
       <PageContent>{children}</PageContent>
       <Footer />
+      <CookieConsent />
     </LanguageProvider>
   );
 }
