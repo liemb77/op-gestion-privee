@@ -1,0 +1,15 @@
+import type { MetadataRoute } from 'next';
+
+const SITE_URL = 'https://www.opgestionfinancierestrategique.ca';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+
+  return [
+    { url: SITE_URL, lastModified, changeFrequency: 'monthly', priority: 1 },
+    { url: `${SITE_URL}/services`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/a-propos`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/politique-de-confidentialite`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
+  ];
+}

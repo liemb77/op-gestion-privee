@@ -203,6 +203,16 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const FAQ_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.q.fr,
+    acceptedAnswer: { '@type': 'Answer', text: item.a.fr },
+  })),
+};
+
 export default function HomePage() {
   const { lang } = useLang();
   const T = t[lang];
@@ -210,6 +220,10 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+      />
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
       <section
         className="relative min-h-screen flex items-end overflow-hidden"
