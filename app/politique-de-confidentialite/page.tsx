@@ -245,7 +245,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
             <address className="not-italic space-y-1.5 text-sm text-[#78716C] font-light">
               <p className="font-medium text-[#1C1917]">Olivier Pastorel</p>
-              <p>1-45 rue Rémi Dansereau<br />Beloeil, QC J3G 0N6</p>
+              <p>1-45, rue Rémi Dansereau<br />Belœil QC J3G 0N6</p>
               <p>
                 <a href="tel:5144432335" className="hover:text-[#C4A35A] transition-colors">
                   514 443-2335

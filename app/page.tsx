@@ -20,8 +20,8 @@ const WHY_US = [
     ),
     title: { fr: 'Indépendant et objectif', en: 'Independent & Objective' },
     desc: {
-      fr: "Nos conseils sont entièrement impartiaux. Aucun produit exclusif à promouvoir — seulement les meilleures solutions pour votre situation.",
-      en: "Our advice is entirely impartial. No proprietary products to push — only the best solutions for your situation.",
+      fr: "Nous n'offrons aucun produit exclusif, seules les meilleures solutions vous sont proposées selon votre situation.",
+      en: "We offer no proprietary products — only the best solutions are proposed to you based on your situation.",
     },
   },
   {
@@ -32,8 +32,8 @@ const WHY_US = [
     ),
     title: { fr: 'Vision financière globale', en: 'Comprehensive Financial Vision' },
     desc: {
-      fr: "Cinq domaines d'expertise réunis sous un seul conseiller : investissement, retraite, assurances, fiscalité et succession. Une vision cohérente, sans angle mort.",
-      en: "Five areas of expertise under one advisor: investment, retirement, insurance, tax, and estate. A coherent vision with no blind spots.",
+      fr: "Un seul conseiller, cinq domaines d'expertise réunis : investissement, retraite, assurances, fiscalité et succession. Une vision cohérente, sans angle mort.",
+      en: "One advisor, five areas of expertise combined: investment, retirement, insurance, tax, and estate. A coherent vision with no blind spots.",
     },
   },
   {
@@ -65,11 +65,11 @@ const WHY_US = [
 const APPROACH = [
   {
     title: { fr: 'Rencontre initiale', en: 'Initial Meeting' },
-    desc: { fr: 'Nous commençons par une conversation approfondie pour comprendre votre situation, vos objectifs de vie et vos valeurs — sans engagement.', en: 'We start with an in-depth conversation to understand your situation, life goals, and values — with no obligation.' },
+    desc: { fr: 'Nous commençons par une conversation approfondie pour comprendre votre situation, vos objectifs de vie et vos valeurs, et ce, sans engagement.', en: 'We start with an in-depth conversation to understand your situation, life goals, and values — with no obligation.' },
   },
   {
     title: { fr: 'Stratégie personnalisée', en: 'Personalized Strategy' },
-    desc: { fr: "Nous élaborons une stratégie financière globale et cohérente, entièrement adaptée à votre réalité — investissement, fiscalité, retraite et succession.", en: 'We develop a comprehensive financial strategy, fully tailored to your reality — investment, tax, retirement, and estate.' },
+    desc: { fr: "Nous élaborons une stratégie financière globale et cohérente, entièrement adaptée à votre réalité : investissement, fiscalité, retraite et succession.", en: 'We develop a comprehensive financial strategy, fully tailored to your reality — investment, tax, retirement, and estate.' },
   },
   {
     title: { fr: 'Mise en œuvre et suivi', en: 'Implementation & Monitoring' },
@@ -113,11 +113,11 @@ const FAQ_ITEMS = [
   },
   {
     q: { fr: 'Comment se déroule la première rencontre?', en: 'How does the first meeting work?' },
-    a: { fr: 'La première rencontre est gratuite et sans engagement. Elle dure environ 45 à 60 minutes et nous permet de mieux comprendre votre situation, vos objectifs et vos préoccupations. Aucun document n\'est requis — juste une conversation honnête.', en: 'The first meeting is free and without obligation. It lasts about 45 to 60 minutes and allows us to better understand your situation, goals, and concerns. No documents required — just an honest conversation.' },
+    a: { fr: 'La première rencontre est gratuite et sans engagement. Elle dure environ 45 à 60 minutes et nous permet de mieux comprendre votre situation, vos objectifs et vos préoccupations. Aucun document n\'est requis, juste une conversation franche et honnête.', en: 'The first meeting is free and without obligation. It lasts about 45 to 60 minutes and allows us to better understand your situation, goals, and concerns. No documents required — just an honest conversation.' },
   },
   {
     q: { fr: 'Êtes-vous indépendant d\'une banque ou d\'un assureur?', en: 'Are you independent from a bank or insurer?' },
-    a: { fr: 'Oui, totalement. Nous ne sommes rattachés à aucune institution financière. Cela nous permet de vous recommander les produits et solutions qui correspondent réellement à votre situation, sans conflit d\'intérêt.', en: 'Yes, completely. We are not affiliated with any financial institution. This allows us to recommend products and solutions that truly fit your situation, without conflict of interest.' },
+    a: { fr: 'Oui, totalement. Nous ne sommes rattachés à aucune institution financière. Cela nous permet de vous recommander les produits et solutions qui correspondent réellement à votre situation, sans conflit d\'intérêts.', en: 'Yes, completely. We are not affiliated with any financial institution. This allows us to recommend products and solutions that truly fit your situation, without conflict of interest.' },
   },
   {
     q: { fr: 'Comment sont calculés vos honoraires?', en: 'How are your fees calculated?' },
@@ -125,7 +125,7 @@ const FAQ_ITEMS = [
   },
   {
     q: { fr: 'Faut-il avoir un patrimoine important pour faire appel à vous?', en: 'Do I need significant assets to work with you?' },
-    a: { fr: 'Non. Nous accueillons des clients à différentes étapes de leur vie financière. Ce qui compte, c\'est votre volonté de planifier et de construire un avenir solide — peu importe où vous en êtes aujourd\'hui.', en: 'No. We welcome clients at different stages of their financial lives. What matters is your willingness to plan and build a solid future — regardless of where you are today.' },
+    a: { fr: 'Non. Nous accueillons des clients à différentes étapes de leur vie financière. Ce qui compte, c\'est votre volonté de planifier et de construire un avenir solide, peu importe où vous en êtes aujourd\'hui.', en: 'No. We welcome clients at different stages of their financial lives. What matters is your willingness to plan and build a solid future — regardless of where you are today.' },
   },
 ];
 
@@ -223,7 +223,7 @@ export default function HomePage() {
               {lang === 'fr' ? <>Exploitez tout le potentiel<br className="hidden sm:block" /> de votre patrimoine.</> : <>Unlock the full potential<br className="hidden sm:block" /> of your wealth.</>}
             </h1>
             <p className="hero-animate delay-600 text-white/65 text-base sm:text-lg font-light leading-relaxed max-w-xl mb-10">
-              {lang === 'fr' ? 'Solutions intégrées en investissement, retraite, fiscalité et planification successorale.' : 'Integrated solutions in investment, retirement, tax planning, and estate management.'}
+              {lang === 'fr' ? 'Solutions intégrées en investissement, retraite, fiscalité et planification successorale' : 'Integrated solutions in investment, retirement, tax planning, and estate management.'}
             </p>
             <div className="hero-animate delay-800 flex flex-wrap gap-4">
               <Link href={BOOKING_URL} className="inline-block bg-[#C4A35A] text-[#1C1917] text-[11px] tracking-[0.2em] uppercase px-8 py-4 font-semibold hover:bg-[#D4B87A] transition-colors duration-200 cursor-pointer">
@@ -265,8 +265,8 @@ export default function HomePage() {
               <div className="w-8 h-[1px] bg-[#C4A35A] mb-6" />
               <p className="text-white/50 text-sm font-light leading-relaxed max-w-sm mb-10">
                 {lang === 'fr'
-                  ? "Parce qu'un bon conseiller ne se contente pas de gérer vos actifs — il comprend votre vie, anticipe vos besoins et vous accompagne dans la durée."
-                  : "Because a good advisor doesn't just manage your assets — they understand your life, anticipate your needs, and support you over time."}
+                  ? "Parce qu'un bon conseiller ne se contente pas de gérer vos actifs, il comprend votre vie et vous accompagne tout au long de votre parcours."
+                  : "Because a good advisor doesn't just manage your assets, they understand your life and support you throughout your journey."}
               </p>
               <Link
                 href={BOOKING_URL}
@@ -333,7 +333,7 @@ export default function HomePage() {
             <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-4">{lang === 'fr' ? 'Notre approche' : 'Our approach'}</p>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
               <h2 className="font-serif text-4xl md:text-5xl text-[#1C1917] font-medium leading-tight max-w-sm">
-                {lang === 'fr' ? 'Une méthode claire, une vision durable.' : 'A clear method, a lasting vision.'}
+                {lang === 'fr' ? 'Une méthode claire, une vision durable' : 'A clear method, a lasting vision.'}
               </h2>
               <p className="text-[#78716C] max-w-xs text-sm font-light leading-relaxed">
                 {lang === 'fr' ? 'Chaque mandat suit le même processus rigoureux pour garantir des résultats alignés sur vos objectifs.' : 'Every mandate follows the same rigorous process to ensure results aligned with your goals.'}
@@ -435,7 +435,7 @@ export default function HomePage() {
                       <svg key={j} className="w-3.5 h-3.5 text-[#C4A35A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                     ))}
                   </div>
-                  <blockquote className="font-serif italic text-[#1C1917] text-lg leading-relaxed flex-1">"{testimonial.quote[l]}"</blockquote>
+                  <blockquote className="font-serif italic text-[#1C1917] text-lg leading-relaxed flex-1">{lang === 'fr' ? `« ${testimonial.quote[l]} »` : `"${testimonial.quote[l]}"`}</blockquote>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-[1px] bg-[#C4A35A]" />
                     <div>

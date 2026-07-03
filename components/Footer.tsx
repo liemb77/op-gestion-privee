@@ -52,7 +52,7 @@ export default function Footer() {
           <div>
             <p className="text-white/30 text-[10px] tracking-[0.3em] uppercase mb-5">{T.footer.contactInfo}</p>
             <address className="not-italic space-y-3 text-sm text-white/55 font-light">
-              <p className="leading-relaxed">1-45 rue Rémi Dansereau<br />Beloeil, QC J3G 0N6</p>
+              <p className="leading-relaxed">1-45, rue Rémi Dansereau<br />Belœil QC J3G 0N6</p>
               <p><a href="tel:5144432335" className="hover:text-[#C4A35A] transition-colors cursor-pointer">514 443-2335</a></p>
               <p><a href="mailto:olivier.pastorel@opgestionprivee.ca" className="hover:text-[#C4A35A] transition-colors cursor-pointer break-all">olivier.pastorel@opgestionprivee.ca</a></p>
             </address>
