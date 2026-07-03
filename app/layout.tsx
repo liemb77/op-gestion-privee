@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   description: 'Conseiller en sécurité financière. Solutions intégrées en investissement, planification de la retraite, fiscalité et planification successorale — Belœil, Québec.',
   keywords: ['conseiller financier', 'gestion de patrimoine', 'planification retraite', 'Belœil', 'Québec', 'investissement'],
   alternates: { canonical: '/' },
+  verification: { google: 'JI8InYqR9nq2-_Jf7ukVdL6YJ4Vfboz3V0fjvKnnzKY' },
   openGraph: {
     type: 'website',
     locale: 'fr_CA',
