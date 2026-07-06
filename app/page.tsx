@@ -471,7 +471,7 @@ export default function HomePage() {
             <AnimFade>
               <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-4">FAQ</p>
               <h2 className="font-serif text-4xl md:text-5xl text-[#1C1917] font-medium leading-tight mb-6">
-                {lang === 'fr' ? 'Vos questions, nos réponses.' : 'Your questions, our answers.'}
+                {lang === 'fr' ? 'Vos questions, nos réponses' : 'Your questions, our answers.'}
               </h2>
               <p className="text-[#78716C] text-sm font-light leading-relaxed mb-8">
                 {lang === 'fr' ? "Une question? Voici les réponses aux demandes les plus fréquentes. Pour toute autre question, n'hésitez pas à nous contacter." : "A question? Here are answers to the most common inquiries. For anything else, feel free to contact us."}
@@ -505,7 +505,7 @@ export default function HomePage() {
           <AnimFade>
             <p className="text-[#C4A35A] text-[11px] tracking-[0.35em] uppercase mb-4">{lang === 'fr' ? 'Commençons' : "Let's Begin"}</p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white font-medium mb-5 leading-tight max-w-2xl mx-auto">{T.home.ctaBannerTitle}</h2>
-            <p className="text-white/50 mb-4 max-w-sm mx-auto text-sm font-light leading-relaxed">{T.home.ctaBannerText}</p>
+            <p className="text-white/50 mb-4 max-w-sm mx-auto text-sm font-light leading-relaxed whitespace-pre-line">{T.home.ctaBannerText}</p>
             <p className="text-[#C4A35A]/70 text-xs tracking-wide mb-10">
               {lang === 'fr' ? '— Première rencontre gratuite, sans engagement —' : '— First meeting free, no obligation —'}
             </p>

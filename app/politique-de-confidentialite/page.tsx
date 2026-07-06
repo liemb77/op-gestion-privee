@@ -56,7 +56,7 @@ export default function PolitiqueConfidentialitePage() {
   const { lang } = useLang();
 
   const tocItems: [string, string][] = [
-    ['#s1', '1. Notre engagement'],
+    ['#s1', '1. Engagement'],
     ['#s2', '2. Responsabilité'],
     ['#s3', '3. Consentement'],
     ['#s4', '4. Raisons de la collecte | utilisation | conservation'],
@@ -121,10 +121,10 @@ export default function PolitiqueConfidentialitePage() {
           </ol>
         </nav>
 
-        {/* 1. Notre engagement */}
-        <H2 id="s1">1. Notre engagement</H2>
+        {/* 1. Engagement */}
+        <H2 id="s1">1. Engagement</H2>
         <P>
-          Afin de vous donner accès aux produits et aux services financiers, nous recueillons certains de vos renseignements personnels et assurons la protection de ceux-ci. Nous respectons la Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE), une loi fédérale concernant la protection des renseignements personnels, et toute loi provinciale qui s'applique. Nous basons également cette politique sur les recommandations et sur le code déontologique de la Chambre de la sécurité financière, qui tient lieu d'organisme d'autorèglementation de notre industrie. Voyez en annexe B les références au code déontologique, ainsi que les questions fréquemment posées.
+          Afin de vous donner accès aux produits et aux services financiers, nous recueillons certains de vos renseignements personnels et en assurons la protection. Nous respectons la Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE), une loi fédérale concernant la protection des renseignements personnels, et toute loi provinciale qui s'applique. Nous basons également cette politique sur les recommandations et sur le code déontologique de la Chambre de la sécurité financière, qui tient lieu d'organisme d'autorèglementation de notre industrie. Voyez en annexe B les références au code déontologique, ainsi que les questions fréquemment posées.
         </P>
 
         {/* 2. Responsabilité */}
@@ -139,7 +139,7 @@ export default function PolitiqueConfidentialitePage() {
         <Divider>
           <H2 id="s3">3. Consentement</H2>
           <P>
-            Nous recueillerons uniquement les renseignements fournis avec votre consentement. Il y aura utilisation de vos renseignements personnels, notamment votre nom, votre adresse, votre date de naissance, vos antécédents médicaux et vos habitudes de vie, pour trouver des produits, des concepts et des services financiers qui répondent aux besoins que vous avez identifiés. En signant le formulaire d'autorisation, vous consentez, en votre nom ainsi qu'au nom de vos liquidateur(-trice)s, administrateur(-trice)s ou cessionnaires, à :
+            Nous recueillerons uniquement les renseignements fournis avec votre consentement. L'utilisation de vos renseignements personnels, notamment votre nom, votre adresse, votre date de naissance, vos antécédents médicaux et vos habitudes de vie, ne servira que pour trouver des produits, des concepts et des services financiers qui répondent aux besoins que vous avez identifiés. En signant le formulaire d'autorisation, vous consentez, en votre nom ainsi qu'au nom de vos liquidateur(-trice)s, administrateur(-trice)s ou cessionnaires, à :
           </P>
           <Bullets items={[
             "Fournir des renseignements exacts tout au long de notre relation d'affaires et au fur et à mesure que votre situation évolue.",
@@ -169,7 +169,7 @@ export default function PolitiqueConfidentialitePage() {
         <Divider>
           <H2 id="s6">6. Limite de l'utilisation | communication | conservation</H2>
           <P>
-            Nous utiliserons et divulguerons vos renseignements personnels afin de remplir nos fonctions, de vous conseiller et, s'il y a lieu, d'observer la loi. Les renseignements personnels contenus dans votre dossier client(e) seront communiqués seulement :
+            Nous n'utilisons et ne divulguons vos renseignements personnels que dans le but de remplir nos fonctions, de vous conseiller et, s'il y a lieu, d'observer la loi. Les renseignements personnels contenus dans votre dossier client(e) sont communiqués seulement :
           </P>
           <Bullets items={[
             "À nos employé(e)s et aux personnes que nous aurons autorisé(e)s, par exemple des professionnel(le)s, afin de vous aider dans des domaines hors de notre champ de pratique.",
@@ -189,7 +189,7 @@ export default function PolitiqueConfidentialitePage() {
         <Divider>
           <H2 id="s7">7. Exactitude des renseignements</H2>
           <P>
-            Afin de faire les recommandations appropriées, nous devons recevoir des renseignements exacts. Il nous incombe de conserver les renseignements à votre sujet aussi exacts et à jour que possible. Si la situation le permet, nous tenterons de mettre à jour vos renseignements personnels afin de déterminer si les recommandations que nous avons émises sont toujours appropriées selon l'évolution de votre situation. Par ailleurs, nous nous fions également à vous pour nous fournir des mises à jour régulières. Sur demande, vous pouvez passer en revue les renseignements personnels que nous conservons à votre sujet.
+            Afin de faire les recommandations appropriées, nous devons recevoir des renseignements exacts. Il nous incombe de conserver les renseignements à votre sujet aussi exacts et à jour que possible. Si la situation l'exige, nous mettrons à jour vos renseignements personnels afin de déterminer si les recommandations que nous avons émises sont toujours appropriées selon l'évolution de votre situation. Par ailleurs, nous nous fions également à vous pour nous fournir des mises à jour régulières. Sur demande, vous pouvez passer en revue les renseignements personnels que nous conservons à votre sujet.
           </P>
         </Divider>
 
@@ -385,7 +385,7 @@ export default function PolitiqueConfidentialitePage() {
 
           <H3>Code de déontologie</H3>
           <P>
-            Un(e) représentant(e) doit s'assurer que les renseignements qu'il détient à propos de ses client(e)s demeurent confidentiels, à moins que certaines dispositions légales ou qu'une ordonnance d'un tribunal permettent de les divulguer. Il(elle) est également tenu(e) d'utiliser les renseignements qu'il(elle) recueille seulement aux fins pour lesquelles il(elle) les a obtenus et de ne jamais les utiliser au préjudice de son(sa) client(e).
+            Un(e) représentant(e) doit s'assurer que les renseignements qu'il(elle) détient à propos de ses client(e)s demeurent confidentiels, à moins que certaines dispositions légales ou qu'une ordonnance d'un tribunal permettent de les divulguer. Il(elle) est également tenu(e) d'utiliser les renseignements qu'il(elle) recueille seulement aux fins pour lesquelles il(elle) les a obtenus et de ne jamais les utiliser au préjudice de son(sa) client(e).
           </P>
           <P>
             Ce sont les articles 26 et 27 du Code de déontologie de la Chambre de la sécurité financière qui prévoient ces obligations.

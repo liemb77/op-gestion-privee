@@ -17,8 +17,8 @@ export const t = {
       aboutTitle: 'Une approche personnalisée',
       aboutText: 'Avec une expertise approfondie en gestion de patrimoine, Olivier Pastorel accompagne ses clients à chaque étape de leur parcours financier. Basé à Belœil, il propose des solutions intégrées alliant investissement, planification fiscale et protection du patrimoine, adaptées à la réalité québécoise.',
       aboutCta: 'En savoir plus',
-      ctaBannerTitle: 'Discutons de votre patrimoine',
-      ctaBannerText: 'Une conversation suffit pour commencer à bâtir une stratégie à votre image.',
+      ctaBannerTitle: 'Discutons de votre patrimoine.',
+      ctaBannerText: 'Une conversation suffit pour commencer à bâtir\nune stratégie à votre image.',
       ctaBannerBtn: 'Nous contacter',
     },
     about: {
@@ -58,7 +58,7 @@ Votre portefeuille sera régulièrement contrôlé, ajusté et rééquilibré po
         {
           id: 'retraite',
           title: 'Planification de la retraite',
-          short: 'Une stratégie durable pour maintenir votre style de vie tout au long de la retraite',
+          short: 'Stratégie durable pour maintenir votre style de vie tout au long de la retraite',
           body: `Nous établissons une planification de retraite à l'aide d'une stratégie durable, capable de s'adapter à l'évolution de votre vie, des marchés et de la législation.
 
 Nous travaillons avec vous pour trouver le bon équilibre entre la préservation de votre patrimoine et la possibilité de bénéficier d'un potentiel de croissance — tout en maintenant votre style de vie tout au long de votre retraite.`,
@@ -104,7 +104,7 @@ Les stratégies fiscales intelligentes comprennent entre autres :
     contact: {
       pageTitle: 'Contact',
       pageSub: 'Nous sommes disponibles pour répondre à toutes vos questions.',
-      formTitle: 'Envoyez-nous un message',
+      formTitle: 'Envoyez-nous un message.',
       nameLabel: 'Nom complet',
       namePlaceholder: 'Jean Tremblay',
       emailLabel: 'Courriel',
