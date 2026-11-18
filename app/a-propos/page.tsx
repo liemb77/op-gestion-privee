@@ -98,6 +98,37 @@ export default function AboutPage() {
           </AnimFade>
         </div>
 
+        {/* Maryline */}
+        <div className="border-t border-[#E7E5E0] pt-20 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-start">
+            <AnimFade>
+              <div className="relative max-w-[260px]">
+                <div className="absolute -top-3 -left-3 w-full h-full border border-[#C4A35A]/30 z-0" />
+                <div
+                  className="relative z-10 aspect-[3/4] overflow-hidden"
+                  role="img"
+                  aria-label={T.about.marylineTitle}
+                  style={{
+                    backgroundImage: 'url(/gallery/maryline-carrier.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center top',
+                  }}
+                />
+              </div>
+            </AnimFade>
+
+            <AnimFade delay={200} className="md:col-span-2 pt-2">
+              <h3 className="font-serif text-3xl text-[#1C1917] font-medium mb-1">{T.about.marylineTitle}</h3>
+              <p className="text-[#78716C] text-sm italic font-serif mb-5">{T.about.marylineRole}</p>
+              <div className="w-6 h-[1px] bg-[#C4A35A] mb-5" />
+              <p className="text-[#78716C] leading-relaxed text-sm font-light mb-6">{T.about.marylineBio}</p>
+              <div className="space-y-1.5 text-sm">
+                <p><a href="mailto:maryline.carrier@opgestionprivee.ca" className="text-[#1C1917] hover:text-[#C4A35A] transition-colors cursor-pointer">maryline.carrier@opgestionprivee.ca</a></p>
+              </div>
+            </AnimFade>
+          </div>
+        </div>
+
         {/* Aurelie */}
         <div className="border-t border-[#E7E5E0] pt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
