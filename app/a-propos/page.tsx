@@ -123,6 +123,7 @@ export default function AboutPage() {
               <div className="w-6 h-[1px] bg-[#C4A35A] mb-5" />
               <p className="text-[#78716C] leading-relaxed text-sm font-light mb-6">{T.about.marylineBio}</p>
               <div className="space-y-1.5 text-sm">
+                <p><a href="tel:4502317655" className="text-[#1C1917] hover:text-[#C4A35A] transition-colors cursor-pointer">450 231-7655</a></p>
                 <p><a href="mailto:maryline.carrier@opgestionprivee.ca" className="text-[#1C1917] hover:text-[#C4A35A] transition-colors cursor-pointer">maryline.carrier@opgestionprivee.ca</a></p>
               </div>
             </AnimFade>
